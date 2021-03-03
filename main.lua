@@ -74,7 +74,6 @@ function love.load()
 
     love.keyboard.keysPressed = {}
 
-    love.mouse.buttonsPressed = {}
 end
 
 function love.resize(w, h)
@@ -94,9 +93,6 @@ function love.keyboard.wasPressed(key)
     return love.keyboard.keysPressed[key]
 end
 
-function love.mouse.wasPressed(button)
-    return love.mouse.buttonsPressed[button]
-end
 
 function love.update(dt)
     if scrolling then
@@ -107,7 +103,6 @@ function love.update(dt)
     gStateMachine:update(dt)
 
     love.keyboard.keysPressed = {}
-    love.mouse.buttonsPressed = {}
 end
 
 function love.draw()
